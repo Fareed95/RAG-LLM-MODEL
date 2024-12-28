@@ -29,14 +29,9 @@ echo "Virtual environment name set to: %virtualenv%"
 
 :: Create the Python virtual environment
 echo "Creating a Python virtual environment..."
-if not exist server (
-    echo "Directory 'server' does not exist. Please ensure you are in the correct folder."
-    exit /b
-)
-cd server
 python -m venv "%virtualenv%"
 call "%virtualenv%\Scripts\activate.bat"
-cd ..
+
 
 :: Add the virtual environment directory to .gitignore
 echo "Adding %virtualenv% to .gitignore..."
