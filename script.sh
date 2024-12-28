@@ -26,10 +26,8 @@ done
 
 # Create the Python virtual environment
 echo "Creating a Python virtual environment..."
-cd server
 python3 -m venv "$virtualenv"
 . $virtualenv/bin/activate
-cd ..
 
 # Add the virtual environment directory to .gitignore
 echo "Adding $virtualenv to .gitignore..."
